@@ -1,0 +1,32 @@
+GOAL: goes through files in a given directory and creates a header file for them
+
+details:
+	for packages, they are removed from the og files and added to the header
+	each file has a section in the header labeled //xxx.c
+
+things i need to do:
+	1) learn how to manuever through a directory and get all the .c files in it recursively
+	2) create a pattern recognition system (regex?) that can identify when a function is defined
+		*exclude stuff that's commented out
+	3) copy all of the #include stuff
+		*how can you easily check if one has already been copied into the header?
+
+roadmap:
+	- learn 1
+	- outline the program structure
+		- find all the .c files, add to a list
+		- go through the list. access each .c file
+		- from each file, op the #include and //.c functions
+			- the #include will go in a set -- duplicates don't matter
+			- use regex to get the functions from the file, and immediately write the op to the header
+	- craft the regex
+
+
+PROGRAM OUTLINE:
+	- main.py
+		- does whats described in the roadmap
+		- NEEDS FUNCTIONS:	void handle_packages(string op)
+					void handle_func(string op)	
+					string get_files()	   	
+	- string_help.py
+		- holds all helper functions for manipulating strings
