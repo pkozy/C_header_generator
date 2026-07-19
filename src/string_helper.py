@@ -21,3 +21,11 @@ def is_c_file(file) -> bool:
         return True
     else: 
         return False
+
+def is_include(line) -> bool:
+    pattern = re.compile("^#include <.+")
+    is_match = pattern.match(line)
+    if is_match:
+        return True
+    else:
+        return False
