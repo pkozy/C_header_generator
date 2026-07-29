@@ -11,10 +11,12 @@ def __get_files(dir=".") -> list:
         2. if it is a directory
     """
 
+    os.chdir(dir)
     files=[];
-    for f in os.scandir(dir):
+    for f in os.scandir():
         fdata = (os.path.abspath(f.name), f.is_dir())
         files.append(fdata);
+    os.chdir("..")
     return files;
 
 

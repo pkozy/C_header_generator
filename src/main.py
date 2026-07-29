@@ -1,16 +1,20 @@
 import fmanage
+import fgen
 import os
+import sys
 
 """
-This module focuses on manipulating the files in the directory
-to create the header.
+Header file generator for C files.
 
 Author: Polina Kozyarchuk
 Version: 7/12/26
 """
 
 def main(): 
-    print(fmanage.get_c_files())
+    c_files = fmanage.get_c_files(sys.argv[1])
+   
+    for file in c_files:
+        fgen.gen_h_file(file)
 
 
 if __name__ == "__main__":

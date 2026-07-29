@@ -1,9 +1,3 @@
-"""
-This module includes functions that help manipulate and identify strings.
-
-Author: Polina Kozyarchuk
-Version: 7/12/26
-"""
 import re
 
 def is_c_file(file) -> bool:
@@ -20,12 +14,4 @@ def is_c_file(file) -> bool:
     if is_match:
         return True
     else: 
-        return False
-
-def is_include(line) -> bool:
-    pattern = re.compile("^#include <.+")
-    is_match = pattern.match(line)
-    if is_match:
-        return True
-    else:
         return False
