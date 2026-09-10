@@ -8,5 +8,5 @@ This script can be used with a single file or with a directory of files. Given a
 
 # How to use:  
 `python3 hgen.py [input type] [name of file/directory]`  
-[input type]: must be either \"d\" for directory or \"f\" for file  
-[name of file/directory]: give the relative or absolute path to the file or directory  
+[input type]: must be either \"d\" for directory or \"f\" for file.  
+[name of file/directory]: give the relative or absolute path to the file or directory.  
