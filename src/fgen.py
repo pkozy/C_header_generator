@@ -2,7 +2,7 @@ import fmanage
 import tree_sitter_c as tsc 
 from tree_sitter import Language, Parser
 
-def setup_trst(fpath) -> TreeCursor:
+def setup_trst(fpath): #-> TreeCursor:
     """
     Sets up tree sitter.
 
